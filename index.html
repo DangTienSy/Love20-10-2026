@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#ffb3cc" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>Chúc Mừng 20/10 💕</title>
+  <meta name="description" content="Lời chúc yêu thương nhân ngày 20/10 - Ngày Phụ Nữ Việt Nam" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Quicksand:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <canvas id="petalCanvas"></canvas>
+
+  <!-- SECTION 1: HERO -->
+  <section class="hero" id="hero">
+    <div class="flower-corner flower-tl">🌸</div>
+    <div class="flower-corner flower-tr">🌺</div>
+    <div class="flower-corner flower-bl">🌷</div>
+    <div class="flower-corner flower-br">🌹</div>
+
+    <div class="garland left-garland">
+      <span>🌸</span><span>🌺</span><span>🌷</span><span>🌸</span>
+      <span>🌹</span><span>🌸</span><span>🌺</span><span>🌷</span>
+    </div>
+    <div class="garland right-garland">
+      <span>🌹</span><span>🌷</span><span>🌺</span><span>🌸</span>
+      <span>🌷</span><span>🌹</span><span>🌸</span><span>🌺</span>
+    </div>
+
+    <div class="hero-content">
+      <div class="date-badge">20 / 10</div>
+      <h1 class="hero-title">Chúc Mừng Ngày<br /><span class="highlight">Phụ Nữ Việt Nam</span></h1>
+      <p class="hero-subtitle">Gửi đến người anh yêu thương nhất ✨</p>
+
+      <div class="bouquet-container">
+        <img src="IMG_2668.jpeg" alt="Hoa hồng" class="bouquet-img" />
+        <div class="sparkle s1">✨</div>
+        <div class="sparkle s2">💫</div>
+        <div class="sparkle s3">⭐</div>
+        <div class="sparkle s4">✨</div>
+      </div>
+
+      <div class="hearts-row">
+        <span class="heart-icon">💗</span>
+        <span class="heart-icon delay1">💖</span>
+        <span class="heart-icon delay2">💕</span>
+        <span class="heart-icon delay3">💗</span>
+        <span class="heart-icon delay4">💖</span>
+      </div>
+
+      <div class="scroll-hint">
+        <p>Kéo xuống để xem thêm</p>
+        <div class="arrow-down">↓</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: PHOTOS -->
+  <section class="photos-section" id="photos">
+    <div class="section-header">
+      <div class="section-flower">🌸 🌺 🌸</div>
+      <h2 class="section-title">Những Khoảnh Khắc Đẹp</h2>
+      <p class="section-desc">Những bức ảnh kỷ niệm đáng nhớ của chúng mình 💕</p>
+    </div>
+
+    <div class="photo-grid">
+      <div class="photo-card" id="photo-1">
+        <img class="photo-preview visible" src="IMG_0184.jpeg" alt="Kỷ niệm 1" />
+        <div class="photo-label">Kỷ niệm 1 💗</div>
+      </div>
+
+      <div class="photo-card" id="photo-2">
+        <img class="photo-preview visible" src="IMG_0734.jpg" alt="Kỷ niệm 2" />
+        <div class="photo-label">Kỷ niệm 2 💖</div>
+      </div>
+
+      <div class="photo-card" id="photo-3">
+        <img class="photo-preview visible" src="IMG_2511.jpeg" alt="Kỷ niệm 3" />
+        <div class="photo-label">Kỷ niệm 3 💕</div>
+      </div>
+
+      <div class="photo-card featured" id="photo-4">
+        <img class="photo-preview visible" src="IMG_2518.png" alt="Kỷ niệm đặc biệt" />
+        <div class="photo-label">Kỷ niệm đặc biệt 💝</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: LOVE LETTER BUTTON -->
+  <section class="letter-section" id="letter">
+    <div class="section-flower">🌹 🌸 🌹</div>
+    <h2 class="section-title">Lời Nhắn Yêu Thương</h2>
+    <p class="letter-teaser">Có điều gì đó anh muốn nói với em...</p>
+
+    <button class="open-letter-btn" id="openLetterBtn" onclick="openLetter()">
+      <span class="btn-icon">💌</span>
+      <span>Dành Cho Em</span>
+      <span class="btn-sparkle">✨</span>
+    </button>
+
+    <div class="bottom-flowers">🌸 🌺 🌷 🌹 🌷 🌺 🌸</div>
+  </section>
+
+  <!-- LOVE LETTER MODAL -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeLetter(event)">
+    <div class="modal-card" id="modalCard">
+      <div class="modal-flowers">🌸 💕 🌸</div>
+      <button class="modal-close" onclick="closeLetter(null, true)" title="Đóng">✕</button>
+      <h3 class="modal-title">💌 Thư Gửi Em 💌</h3>
+      <div class="modal-divider">— 🌹 —</div>
+
+      <div class="letter-content" id="letterContent">
+        <p class="letter-greeting">Gửi người mà anh thương,</p>
+        <p>
+          Nhân ngày 20/10 – Ngày Phụ Nữ Việt Nam, anh muốn gửi đến em những
+          lời chúc từ tận đáy lòng. Em là người tuyệt vời nhất mà cuộc đời này ban cho anh.
+          Mỗi ngày bên em là một ngày anh thêm yêu cuộc sống này hơn. 💗
+        </p>
+        <p>
+          Chúc em luôn xinh đẹp, rạng rỡ và hạnh phúc mỗi ngày. Anh sẽ luôn ở đây,
+          bên cạnh em, trong mọi khoảnh khắc – vui buồn hay khó khăn.
+        </p>
+        <p>
+          Gửi em một lời chúc 20/10 cùng tất cả yêu thương, mong chúng ta luôn nắm tay nhau trên mọi chặng đường
+        </p>
+        <p>
+          Em xứng đáng có được tất cả những điều tốt đẹp nhất trên đời này.
+          Anh yêu em rất nhiều! 🌹
+        </p>
+        <p class="letter-sign">Mãi yêu em,<br /><strong>You are my today and all of my tomorrows 💕</strong></p>
+      </div>
+
+      <div class="modal-divider">— 🌸 —</div>
+      <div class="modal-bottom-hearts">💗 💖 💕 💗 💖</div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-flowers">🌸 🌺 🌷 🌹 🌷 🌺 🌸</div>
+    <p>Made with 💕 for you · 20/10/2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
